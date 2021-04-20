@@ -43,7 +43,8 @@ public class Goods implements Serializable {
     @ApiModelProperty(value = "商品图片")
     private String img;
 
-    @ApiModelProperty(value = "添加商品时间")
+    @ApiModelProperty(value = "创建时间", example = "2019-01-01 8:00:00")
+    @TableField(fill = FieldFill.INSERT)
     private Date addTime;
 
     @ApiModelProperty(value = "商品描述")
@@ -53,6 +54,7 @@ public class Goods implements Serializable {
     private String address;
 
     @ApiModelProperty(value = "1=下架，2=上架")
+    @TableField(fill = FieldFill.INSERT)
     private Integer isEnabled;
 
     @ApiModelProperty(value = "浏览量")

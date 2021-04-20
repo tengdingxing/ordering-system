@@ -14,9 +14,10 @@ import java.util.Date;
 public class GoodMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
-
+        //新增时，默认是1
         this.setFieldValByName("isDeleted",false,metaObject);
-//        this.setFieldValByName("gmtCreate",new Date(),metaObject);
+        this.setFieldValByName("addTime",new Date(),metaObject);
+        this.setFieldValByName("isEnabled",2,metaObject);
 //        this.setFieldValByName("gmtModified",new Date(),metaObject);
 
     }
